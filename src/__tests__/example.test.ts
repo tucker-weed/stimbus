@@ -1,5 +1,5 @@
-import { ApplicationController as Controller } from "../index";
+import ApplicationController from "../index";
 
 test("Application controller extends stimulus Controller", () => {
-  expect(JSON.stringify(Controller.blessings.entries())).toBe("{}");
+  expect(JSON.stringify(ApplicationController.blessings.entries())).toBe("{}");
 });

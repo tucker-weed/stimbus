@@ -3,7 +3,7 @@ import EventBus from "./util/bus";
 
 const eventBus = new EventBus();
 
-export class ApplicationController<ElementType extends Element = Element> extends Controller<ElementType> {
+export default class ApplicationController<ElementType extends Element = Element> extends Controller<ElementType> {
   on(type: EventKey, listener: Listener) {
     eventBus.addEvent(this.context.identifier, type, listener);
   }
