@@ -1,18 +1,19 @@
 import { Controller } from "@hotwired/stimulus";
+import { Listener } from "./types/env";
 import EventBus from "./util/bus";
 
 const eventBus = new EventBus();
 
 export default class ApplicationController<ElementType extends Element = Element> extends Controller<ElementType> {
-  on(type: EventKey, listener: Listener) {
+  on(type: string, listener: Listener) {
     eventBus.addEvent(this.context.identifier, type, listener);
   }
 
-  off(type: EventKey) {
+  off(type: string) {
     eventBus.removeEvent(this.context.identifier, type);
   }
 
-  trigger(type: EventKey, detail?: unknown) {
+  trigger(type: string, detail?: unknown) {
     return eventBus.trigger(type, detail);
   }
 }
