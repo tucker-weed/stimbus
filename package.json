@@ -2,7 +2,7 @@
   "name": "stimbus",
   "version": "1.0.4",
   "main": "lib/index.js",
-  "types": "lib/**/*.d.ts",
+  "types": "lib/index.d.ts",
   "description": "An event bus for stimulus",
   "scripts": {
     "test": "jest --config jestconfig.json",
