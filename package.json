@@ -2,8 +2,8 @@
   "name": "stimbus",
   "version": "1.0.2",
   "main": "lib/index.js",
-  "description": "A nice greeter",
-  "types": "lib/types/index.d.ts",
+  "types": "lib/index.d.ts",
+  "description": "An event bus for stimulus",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
