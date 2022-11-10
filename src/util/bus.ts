@@ -22,11 +22,11 @@ export default class EventBus {
     if (!listener) {
       return;
     }
-    this.#bus[type] = this.#bus[type].filter(x => x !== listener);
+    this.#bus[type] = this.#bus[type].filter((x) => x !== listener);
     delete this.#events[callerId][type];
   }
 
   trigger(type: string, detail?: unknown) {
-    this.#bus[type].forEach(x => x(detail))
+    this.#bus[type].forEach((x) => x(detail));
   }
 }
