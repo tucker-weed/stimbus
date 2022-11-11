@@ -8,8 +8,8 @@ export default function Stimbus<T, K extends keyof T, TBase extends Constructor>
     declare context: Context;
 
     constructor(...args: any[]) {
-      super(...args);
-      this.context = args[0] as Context;
+      super(args);
+      this.context = args as unknown as Context;
     }
 
     on(type: K, listener: Listener) {
