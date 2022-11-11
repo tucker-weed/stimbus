@@ -1,2 +1,4 @@
+import { Controller } from "@hotwired/stimulus";
+
 export type Listener = (detail?: unknown) => unknown;
-export type Constructor<T = {}> = new (...args: any[]) => T;
+export type Constructor = new (...args: any[]) => Controller;

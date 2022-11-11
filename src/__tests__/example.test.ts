@@ -1,4 +1,4 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
 import Stimbus from "../index";
 
 test("Application controller extends stimulus Controller", () => {

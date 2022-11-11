@@ -4,7 +4,6 @@ import EventBus from "./util/bus";
 export default function Stimbus<T, K extends keyof T, TBase extends Constructor>(Base: TBase) {
   return class extends Base {
     readonly #eventBus = new EventBus<T, K>();
-    context = { identifier: "" }
 
     on(type: K, listener: Listener) {
       this.#eventBus.addEvent(this.context.identifier, type, listener);
@@ -17,5 +16,5 @@ export default function Stimbus<T, K extends keyof T, TBase extends Constructor>
     trigger(type: K, detail?: unknown) {
       return this.#eventBus.trigger(type, detail);
     }
-  }
+  };
 }
