@@ -11,7 +11,8 @@
     "lint": "tslint -p tsconfig.json",
     "prepare": "yarn build",
     "prepublishOnly": "yarn test && yarn lint",
-    "preversion": "yarn lint"
+    "preversion": "yarn lint",
+    "postpublish": "git push -f origin master"
   },
   "repository": "https://github.com/tucker-weed/stimbus",
   "keywords": [
