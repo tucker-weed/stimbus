@@ -1,4 +1,4 @@
-import { Context, Controller } from "@hotwired/stimulus";
+import { Context } from "@hotwired/stimulus";
 import { Listener, Constructor } from "./types/env";
 import EventBus from "./util/bus";
 
@@ -8,7 +8,7 @@ export default function Stimbus<T, K extends keyof T, TBase extends Constructor>
     declare context: Context;
 
     constructor(...args: any[]) {
-      const context = args as unknown as Context;
+      const context = args[0] as Context;
       super(context);
       this.context = context;
     }
