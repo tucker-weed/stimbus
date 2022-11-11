@@ -18,3 +18,5 @@ export default function Stimbus<T, K extends keyof T, TBase extends Constructor>
     }
   };
 }
+
+export * from "./types/env";
