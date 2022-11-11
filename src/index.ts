@@ -1,7 +1,8 @@
-import { Listener, Constructor } from "./types/env";
+import { ControllerConstructor } from "@hotwired/stimulus";
+import { Listener } from "./types/env";
 import EventBus from "./util/bus";
 
-export default function Stimbus<T, K extends keyof T, TBase extends Constructor>(Base: TBase) {
+export default function Stimbus<T, K extends keyof T, TBase extends ControllerConstructor>(Base: TBase) {
   return class extends Base {
     readonly #eventBus = new EventBus<T, K>();
 
